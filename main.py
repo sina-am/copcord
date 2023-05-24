@@ -17,4 +17,3 @@ for column in df.columns:
     if (corr>0.2) or (corr< -0.2):
         print(
             f'Column name {column}, corr: {corr}')
-            
