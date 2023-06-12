@@ -17,15 +17,11 @@ def calculate_correlation(df):
 
         df = df[df[column] != ' ']
         df[column] = df[column].astype(np.float64)
-        
+
         corr = df[column].corr(df['weight'])
-        if (corr>0.2) or (corr< -0.2):
+        if (corr > 0.2) or (corr < -0.2):
             print(
                 f'Column name {column}, corr: {corr}')
-
-
-from sklearn.linear_model import LinearRegression 
-from sklearn.model_selection import train_test_split
 
 
 def regression_for_len():
@@ -53,6 +49,7 @@ def regression_for_len():
 
 def main():
     regression_for_len()
+
 
 if __name__ == '__main__':
     main()
