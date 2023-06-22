@@ -34,7 +34,7 @@ data_transactions = data_bin.values.tolist()
 
 te = TransactionEncoder()
 Transaction_Array = te.fit(data_transactions).transform(data_transactions)
-df = pd.DataFrame(te_ary, columns=te.columns_)
+df = pd.DataFrame(Transaction_Array, columns=te.columns_)
 frequent_itemsets = apriori(df, min_support=0.3, use_colnames=True)
 
 rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.8)
