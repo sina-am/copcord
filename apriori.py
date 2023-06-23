@@ -47,6 +47,6 @@ new_df = pd.DataFrame(Transaction_Array, columns=te.columns_)
 frequent_items = apriori(new_df, min_support=0.3, use_colnames=True)
 print(frequent_items)
 
-rules = association_rules(frequent_items, metric="confidence", min_threshold=0.9)
+rules = association_rules(frequent_items, metric="confidence", min_threshold=0.8)
 
 print(rules)
